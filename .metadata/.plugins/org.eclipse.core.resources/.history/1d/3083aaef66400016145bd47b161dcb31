@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Bank {
+	
+	double money = 0;
+	double d = 0;
+	double w = 0;
+	
+	public void main(String[] args){
+		
+
+		
+		System.out.println("Welcom to Universal Bank");
+		System.out.println("Enter D for deposit, W for withdrow and B for balance.");
+		Scanner input = new Scanner(System.in);		
+		String x = (input.next());
+		
+		if (x == "d" || x == "D"){
+			System.out.println("Please Enter the amount money you want to deposit.");
+			Scanner deposite = new Scanner(System.in);		
+			d = (deposite.nextDouble());
+			deposit();			
+		}else if (x == "W" || x == "w"){
+			System.out.println("Please Enter the amount money you want to withdrow.");
+			Scanner withdrow = new Scanner(System.in);		
+			w = (withdrow.nextDouble());
+			withdrow();			
+		}else if (x == "B" || x == "b"){
+			System.out.println("Your current balance is: $" + money);
+		}else{
+			System.out.println("Your enter is invaild.");
+		}
+		
+		
+	}
+	public void deposit(){
+		if(d > 0){
+			money += d;
+			System.out.println("You have deposite $" + d + ".");
+			System.out.println("Your current balance is :$"+money);
+		}
+		else {
+			System.out.println("Your enter is invaild.");
+		}
+	}
+	public void withdrow(){
+		if(w > money){
+			System.out.print("Your don't have enough money to withdrow.");	
+			System.out.println("Your current balance is: $" + money);
+		}else if(w <= money){
+			System.out.println("You have withdrow $"+ w + ".");
+			System.out.println("Your current balance is: $" + money);
+		}else{
+			System.out.println("Your enter is invaild.");
+		}
+	}
+}

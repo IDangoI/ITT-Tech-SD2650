@@ -1,0 +1,11 @@
+
+public class main {
+
+	public static void main (String[] args){
+		
+		char[][] test = new char[3][3];
+		
+		System.out.println(test[0][0]);
+		
+	}
+}

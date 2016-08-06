@@ -1,0 +1,10 @@
+
+public class A {
+	abstract interface Vehicle{
+		final String WARNING="1";
+		void startEngine();
+		public static class TwoWheeler{}
+		
+	}
+}
+

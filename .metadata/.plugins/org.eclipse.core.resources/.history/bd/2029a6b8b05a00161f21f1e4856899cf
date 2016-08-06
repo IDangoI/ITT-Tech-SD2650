@@ -1,0 +1,23 @@
+
+public class main {
+	interface Vehicle{
+		String WARNING="PLEASE";
+		public String engineState="on";
+		void startEngine();
+		public void stopEngine();
+	}
+	public class Bike implements Vehicle{
+		public void startEngine();
+		public void stopEngine();
+		void accelerate(){
+			WARNING = "MAX";
+		}
+	}
+	
+	
+	public static void main (String[] args){
+		
+
+		
+	}
+}

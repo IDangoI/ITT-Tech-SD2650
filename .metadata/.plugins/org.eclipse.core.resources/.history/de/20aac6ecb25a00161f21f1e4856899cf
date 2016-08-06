@@ -1,0 +1,24 @@
+package Exam;
+import java.until.*;
+
+public class A {
+	public static void main (String[] args){
+		Base b = new Derived1(1000);
+		Base c = new Derived2(1000);
+		System.out.println(b==c);
+		System.out.println(b!=c);
+	}
+}
+class Base{
+	int v;
+}
+class Derived1 extends Base{
+	Derived1 (int val){
+		v = val;
+	}
+}
+class Derived2 extends Base{
+	Derived2 (int val){
+		v=val;
+	}
+}

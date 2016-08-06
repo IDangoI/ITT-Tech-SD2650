@@ -1,0 +1,16 @@
+class A{
+	public static void main (String[] args){
+		int Direction =3;
+		String str;
+		switch(Direction)
+		{
+		case 1: str ="S";break;
+		case 2: str ="N";break;
+		case 3: str ="E";break;
+		case 4: str ="W";break;
+		case 5: str ="invalid";break;
+		}
+		System.out.println(str);
+	}
+}
+

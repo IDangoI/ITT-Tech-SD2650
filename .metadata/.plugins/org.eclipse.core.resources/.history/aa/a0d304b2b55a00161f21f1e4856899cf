@@ -1,0 +1,13 @@
+public class A{
+	public static void main (String[] args){
+		int x =10;
+		do{
+			System.out.println("do" + x--);
+		}while(false);
+		while(false){
+			System.out.print(x);
+
+		}
+	}
+}
+

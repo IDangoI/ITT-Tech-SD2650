@@ -1,0 +1,14 @@
+
+public class A {
+	private A(){
+		System.out.println("Class A");
+	}
+}
+public class B extends A{
+	public B(){
+		System.out.println("Class B");
+	}
+	public static void main (String[] args){
+	new B();	
+	}
+}

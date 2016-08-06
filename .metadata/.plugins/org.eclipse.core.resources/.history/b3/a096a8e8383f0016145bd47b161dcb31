@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Bank {
+	
+	public static void main(String[] args){
+		
+		double money = 0;
+		
+		System.out.println("Welcom to Universal Bank");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		
+	}
+}

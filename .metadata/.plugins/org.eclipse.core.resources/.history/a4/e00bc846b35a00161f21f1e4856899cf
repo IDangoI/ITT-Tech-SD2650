@@ -1,0 +1,22 @@
+class A{
+	public A(){
+		System.out.println("A c");
+	}
+	public void displayMethod(){
+		System.out.println("A d");
+	}
+}
+
+class B extends A{
+	public B(){
+		System.out.println("B c");
+	}
+	public void displayMethod(){
+		super.displayMethod();
+		System.out.println("B d");
+	}
+	public static void main (String[] args){
+		B b = new B();
+		b.displayMethod();
+	}
+}

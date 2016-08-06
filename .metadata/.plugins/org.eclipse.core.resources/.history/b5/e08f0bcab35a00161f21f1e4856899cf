@@ -1,0 +1,7 @@
+class B extends A{
+
+	public static void main (String[] args){
+		A b = new B();
+		System.out.println(b.getAge());
+	}
+}

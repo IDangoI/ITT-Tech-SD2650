@@ -1,0 +1,90 @@
+import java.util.Scanner;
+
+public class main
+{
+  public static Scanner sc = new Scanner(System.in);
+
+  public static void main(String[] args)
+  {
+
+	  int size = 3;
+	  char[][] board = new char [size][size];
+	  
+	  String p1 = "X";
+	  String p2 = "O";
+	  
+	  reset(board);
+	  
+	  System.out.println("Welcom to Tic-Tac-Toe");
+	  display(board);
+	  
+	  System.out.print("Go first? 1or2");
+	  int num = sc.nextInt();
+	  
+	  int empCell = size * size;
+	  
+	  int x = sc.nextInt();
+	  int y = sc.nextInt();
+	  
+	  if (num == 1){
+		  System.out.print("\nEnter the row and colum indicies: ");
+		  cellCheck(board,x,y);
+		  
+	  }
+	  
+  }
+  
+  public static void reset(char[][] brd){
+	    for (int i = 0; i < brd.length; i++)
+	        for (int j = 0; j < brd[0].length; j++)
+	          brd[i][j] = ' ';
+  }
+  
+  public static void display(char[][] brd){
+	  	int numRow = brd.length;
+	    int numCol = brd[0].length;
+
+	    System.out.println();
+
+	    // First write the column header
+	    System.out.print("    ");
+	    for (int i = 0; i < numCol; i++)
+	    System.out.print(i + "   ");
+	    System.out.print('\n');
+
+	    System.out.println(); // blank line after the header
+
+	    // The write the table
+	    for (int i = 0; i < numRow; i++) {
+	      System.out.print(i + "  ");
+	      for (int j = 0; j < numCol; j++) {
+	        if (j != 0)
+	          System.out.print("|");
+	        System.out.print(" " + brd[i][j] + " ");
+	      }
+
+	      System.out.println();
+
+	      if (i != (numRow - 1)) {
+	        // separator line
+	        System.out.print("   ");
+	        for (int j = 0; j < numCol; j++) {
+	          if (j != 0)
+	            System.out.print("+");
+	          System.out.print("---");
+	        }
+	        System.out.println();
+	      }
+	    }
+	    System.out.println();
+  }
+  
+  public static cellCheck(char[][] brd, int _x, int _y){
+	  
+	  if(brd[_x][_y] != ' '){
+		  System.out.println("\n!! The cell is already taken.\nEnter the row and colums");
+	  return false;
+	  }
+	  return true;	  
+  }
+}

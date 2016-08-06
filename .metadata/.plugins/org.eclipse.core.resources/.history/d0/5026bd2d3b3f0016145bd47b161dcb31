@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Bank {
+	
+	public static void main(String[] args){
+		
+		double money = 0;
+		
+		
+		System.out.println("Welcom to Universal Bank");
+		System.out.println("Enter D for deposit, W for withdrow and B for balance.");
+		Scanner input = new Scanner(System.in);		
+		String x = (input.next());
+		
+		if (x == "d" || x == "D"){
+			System.out.println("Please Enter the amount money you want to deposit.");
+			Scanner deposite = new Scanner(System.in);		
+			double d = (deposite.nextDouble());
+			if(d > money){
+				money += d;
+				System.out.println("You have deposite $"+d +".");
+				System.out.println("Your current balance is :$"+money);
+				main(String[] args);
+			}
+			
+		}else if (x == "W" || x == "w"){
+			System.out.println("Please Enter the amount money you want to withdrow.");
+			
+		}else if (x == "B" || x == "b"){
+			
+		}else{
+			System.out.println("Your enter is invaild.");
+			main(String[] args);
+		}
+		
+		
+	}
+}
